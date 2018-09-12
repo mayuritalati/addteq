@@ -74,7 +74,6 @@ public class UserUploadController {
 	
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public User getUserByName(@RequestParam("name") String name) throws IOException {
-		System.out.println("name::"+name);
 		User user = (User) userRepository.findByName(name);
 		return user;
 	}
